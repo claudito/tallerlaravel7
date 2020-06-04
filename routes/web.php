@@ -26,7 +26,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('mantenimientos')->group(function () {
 
 
-    Route::resource('empleados','EmpleadoController');
+    Route::resource('empleados','EmpleadoController')
+    ->middleware('auth');
 
 
 
